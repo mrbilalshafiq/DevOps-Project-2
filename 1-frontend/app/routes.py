@@ -7,8 +7,8 @@ import requests
 def home():
     form = IndexForm()
     if request.method == 'POST':
-        char = requests.get("http://service2:5000/get_chargen")
-        num = requests.get("http://service3:5000/get_numgen")
-        prize = requests.post("http://service4:5000/get_prize", json={"account_number" : char.text + num.text})
+        char = requests.get("http://chargen:5001/get_chargen")
+        num = requests.get("http://numgen:5002/get_numgen")
+        prize = requests.post("http://prizegen:5003/prize", json={"account_number" : char.text + num.text})
         return render_template('index.html', form=form, message = prize.text)
     return render_template('index.html', form=form, message = "")

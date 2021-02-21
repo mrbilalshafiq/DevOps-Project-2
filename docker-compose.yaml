@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  service1:
+    build: ./1-frontend
+    ports:
+    - "5000:5000"
+  service2 :
+    build: ./2-chargen
+  service3 :
+    build: ./3-numgen
+  service4 :
+    build: ./4-prizegen
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf

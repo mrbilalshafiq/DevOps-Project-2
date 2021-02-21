@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, request, Response
+from flask import Flask, render_template, redirect, url_for, request, Response
 import random
 
 app = Flask(__name__)
@@ -15,4 +15,4 @@ def prize():
     return Response(str(prize), mimetype='text/plain')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host='0.0.0.0')
+    app.run(debug=True, port=5003, host='0.0.0.0')
