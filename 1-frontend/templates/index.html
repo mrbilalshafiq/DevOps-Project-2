@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <h1>Home</h1>
+    <body>
+        <div>
+            <p>Welcome</p>
+            <br>
+
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.submit }}
+            </form>
+        </div>
+        <div>
+            <p>
+                {{message}}
+            </p>
+        </div>
+    </body>
+</html>
