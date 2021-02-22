@@ -1,14 +1,18 @@
 version: '3.8'
 services:
-  service1:
+  frontend:
+    image: mrbilalshafiq:frontend
     build: ./1-frontend
     ports:
     - "5000:5000"
-  service2 :
+  chargen:
+    image: mrbilalshafiq:chargen
     build: ./2-chargen
-  service3 :
+  numgen:
+    image: mrbilalshafiq:numgen
     build: ./3-numgen
-  service4 :
+  prizegen:
+    image: mrbilalshafiq:prizegen
     build: ./4-prizegen
   nginx:
     image: nginx:latest
