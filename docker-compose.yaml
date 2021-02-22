@@ -5,6 +5,10 @@ services:
     build: ./1-frontend
     ports:
     - "5000:5000"
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_ROOT_PASSWORD: root
+      SECRET_KEU: YOUR_KEY
   chargen:
     image: mrbilalshafiq:chargen
     build: ./2-chargen
@@ -24,3 +28,12 @@ services:
     - type: bind
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
+  db:
+    build: ./db
+    image: mrbilalshafiq/db:latest
+    ports:
+    - target: 3306
+      published: 3306
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_ROOT_PASSWORD: root

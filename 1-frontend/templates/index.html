@@ -21,5 +21,12 @@
 	        {{account}} : {{message}}
 	    </p>
         </div>
+	 <div>
+                {% for prize in prizes %}
+                    <p>--------------------------------</p>
+                    <p>{{ prize.account_number }} : {{ prize.prize }}</p>
+                    <p>--------------------------------</p>
+                {% endfor %}
+        </div>
     </body>
 </html>
