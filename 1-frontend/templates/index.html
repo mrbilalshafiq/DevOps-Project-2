@@ -8,24 +8,22 @@
 	    <h1>It's a win/win situation</h1>
 	    <p>You just can't lose!</p>
             <br>
-
             <form method="POST" action="">
                 {{ form.hidden_tag() }}
                 {{ form.submit }}
             </form>
         </div>
         <div>
+	    <h3>Account  :  Prize</h3>
             <p>
-	        Account  :  Prize
-		<hr>
-	        {{account}} : {{message}}
+	         {{account}} : {{message}}
 	    </p>
         </div>
+	<hr>
+	<h2>List of Winners</h2>
 	 <div>
                 {% for prize in prizes %}
-                    <p>--------------------------------</p>
                     <p>{{ prize.account_number }} : {{ prize.prize }}</p>
-                    <p>--------------------------------</p>
                 {% endfor %}
         </div>
     </body>
