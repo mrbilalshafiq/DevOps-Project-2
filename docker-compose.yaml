@@ -1,22 +1,22 @@
 version: '3.8'
 services:
   frontend:
-    image: mrbilalshafiq:frontend
+    image: mrbilalshafiq/frontend:latest
     build: ./1-frontend
     ports:
     - "5000:5000"
     environment:
       MYSQL_DATABASE: db
       MYSQL_ROOT_PASSWORD: root
-      SECRET_KEU: YOUR_KEY
+      SECRET_KEY: YOUR_KEY
   chargen:
-    image: mrbilalshafiq:chargen
+    image: mrbilalshafiq/chargen:latest
     build: ./2-chargen
   numgen:
-    image: mrbilalshafiq:numgen
+    image: mrbilalshafiq/numgen:latest
     build: ./3-numgen
   prizegen:
-    image: mrbilalshafiq:prizegen
+    image: mrbilalshafiq/prizegen:latest
     build: ./4-prizegen
   nginx:
     image: nginx:latest
