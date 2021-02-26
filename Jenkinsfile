@@ -31,7 +31,7 @@ pipeline{
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            sh "sudo docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
+                            sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
                             
                         }
                     }
@@ -42,8 +42,8 @@ pipeline{
                     script{
                         if (env.rollback == 'false'){
                             docker.withRegistry('', 'docker-hub-credentials'){
-                                sh "sudo docker-compose push"
-                                sh "sudo docker system prune -af"
+                                sh "docker-compose push"
+                                sh "docker system prune -af"
                             }
                             
                         }
