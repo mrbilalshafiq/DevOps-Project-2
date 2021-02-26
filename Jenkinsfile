@@ -3,9 +3,33 @@ pipeline{
         environment {
             app_version = 'v1'
             rollback = 'false'
+            rootpass = credentials("rootpass")
+            SECRET_KEY = credentials("SECRET_KEY")
         }
         stages{
-                        stage('Build Image & Tag'){
+            stage('testing'){
+                steps{
+                    sh '''
+                    cd 1-frontend
+                    pip3 install -r requirements.txt
+                    python3 -m pytest --cov=app --cov-report=term-missing
+                    cd ..
+                    cd 2-chargen
+                    pip3 install -r requirements.txt
+                    python3 -m pytest --cov=app --cov-report=term-missing
+                    cd ..
+                    cd 3-numgen
+                    pip3 install -r requirements.txt
+                    python3 -m pytest --cov=app --cov-report=term-missing
+                    cd ..
+                    cd 4-prizegen
+                    pip3 install -r requirements.txt
+                    python3 -m pytest --cov=app --cov-report=term-missing
+                    cd ..
+                    '''
+                }
+            }
+            stage('Build Image & Tag'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
@@ -35,10 +59,6 @@ pipeline{
                     }
                 }
             }
-            stage('Deploy App'){
-                steps{
-                    sh "docker-compose pull && docker-compose up -d"
-                }
-            }
         }
 }
+ 
