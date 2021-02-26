@@ -53,9 +53,19 @@ pipeline {
             stage("configuration management ansible"){
                 steps{
                     script{
-                        sh "cat /home/jenkins/.ssh/id_rsa"
                         sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
                     }
+                }
+            }
+            stage('Deploy swarm'){
+                steps{
+                    sh '''
+                    ssh -i ~/.ssh/id_rsa dontchangethisemailplease@34.105.204.33 << EOF
+                        rm -rf Project2
+                        git clone https://github.com/mrbilalshafiq/Project2.git && cd Project2
+                        export app_version=${app_version}
+                        docker stack deploy --compose-file docker-compose.yaml project2
+                    '''
                 }
             }
         }
