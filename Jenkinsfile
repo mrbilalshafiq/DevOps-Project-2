@@ -65,7 +65,7 @@ pipeline {
                         git clone https://github.com/mrbilalshafiq/Project2.git && cd Project2
                         export app_version=${app_version}
                         docker stack deploy --compose-file docker-compose.yaml flaskapp
-                        echo "Well done Bilal, you should be proud of yourself."
+                        echo "Well done, you should be proud of yourself."
                     '''
                 }
             }
