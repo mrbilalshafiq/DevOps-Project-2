@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   frontend:
-    image: mrbilalshafiq/frontend:latest
+    image: mrbilalshafiq/frontend:${app_version}
     build: ./1-frontend
     ports:
     - "5000:5000"
