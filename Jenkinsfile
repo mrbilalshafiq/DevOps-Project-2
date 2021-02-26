@@ -27,12 +27,11 @@ pipeline {
                     '''
                 }
             }
-            stage('Build Image & Tag'){
+            stage('Build Image'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
-                            
+                            image = docker.build("[your-dockerhub-username]/chaperoo-frontend")
                         }
                     }
                 }
