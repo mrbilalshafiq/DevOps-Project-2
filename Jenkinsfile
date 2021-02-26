@@ -50,5 +50,12 @@ pipeline {
                     }
                 }
             }
+            stage("configuration management ansible"){
+                steps{
+                    script{
+                        sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
+                    }
+                }
+            }
         }
 }
