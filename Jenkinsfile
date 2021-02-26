@@ -3,8 +3,6 @@ pipeline{
         environment {
             app_version = 'v1'
             rollback = 'false'
-            rootpass = credentials("rootpass")
-            SECRET_KEY = credentials("SECRET_KEY")
         }
         stages{
             stage('testing'){
