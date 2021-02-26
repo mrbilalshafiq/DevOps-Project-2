@@ -5,7 +5,7 @@ pipeline {
             rollback = 'false'
     }
     stages{
-        stage('testing'){
+        stage('Testing All 4 Services'){
             steps{
                 sh '''
                 cd 1-frontend
@@ -27,7 +27,7 @@ pipeline {
                     '''
                 }
             }
-            stage('Build Image & Tag'){
+            stage('Build & Tag'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
@@ -37,7 +37,7 @@ pipeline {
                     }
                 }
             }
-            stage('Push'){
+            stage('Push Image'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
@@ -50,21 +50,22 @@ pipeline {
                     }
                 }
             }
-            stage("configuration management ansible"){
+            stage("Configuration Management via Ansible"){
                 steps{
                     script{
                         sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
                     }
                 }
             }
-            stage('Deploy swarm'){
+            stage('Deploy Swarm Stack'){
                 steps{
                     sh '''
                     ssh -oStrictHostKeyChecking=no dontchangethisemailplease@34.105.204.33 << EOF
                         rm -rf Project2
                         git clone https://github.com/mrbilalshafiq/Project2.git && cd Project2
                         export app_version=${app_version}
-                        docker stack deploy --compose-file docker-compose.yaml project2
+                        docker stack deploy --compose-file docker-compose.yaml flaskapp
+                        echo "Well done Bilal, you should be proud of yourself."
                     '''
                 }
             }
