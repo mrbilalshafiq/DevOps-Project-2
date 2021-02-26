@@ -1,0 +1,15 @@
+all:
+  children:
+    docker:
+      hosts:
+        35.197.228.253:
+    manager:
+      hosts:      
+        34.105.204.33:
+    worker:
+      hosts:
+        35.230.133.14:
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    ansible_user: dontchangethisemailplease
+    ansible_ssh_private_key_file: '~/.ssh/id_rsa'

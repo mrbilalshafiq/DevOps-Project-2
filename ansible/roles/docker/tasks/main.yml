@@ -1,0 +1,40 @@
+---
+# tasks file for docker
+  - name: Install packages list
+    apt:
+      pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3
+      - python3-pip
+      - python-setuptools
+      update_cache: true
+  - name: Get Docker APT Key
+    ansible.builtin.apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name: Add APT Repo
+    ansible.builtin.apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+  - name: Install docker-ce using APT
+    apt:
+     update_cache: true
+     name: docker-ce
+     state: latest
+  - name: Docker is started
+    service:
+      name: docker
+      state: started
+  - name: Install Dockers pip package
+    pip:
+      name: docker
+      executable: pip3
+  - name: Add user to docker group
+    user: 
+      name: dontchangethisemailplease 
+      groups: docker
+      append: yes
+  - name: restart connection to ensure user can complete docker commands
+    meta: reset_connection
