@@ -37,15 +37,13 @@ pipeline{
                     }
                 }
             }
-            stage('Push'){
+            stage('Tag & Push Image'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            docker.withRegistry('', 'docker-hub-credentials'){
-                                sh "docker-compose push"
-                                sh "docker system prune -af"
+                            docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
+                                image.push("${env.app_version}")
                             }
-                            
                         }
                     }
                 }
@@ -57,6 +55,10 @@ pipeline{
                     }
                 }
             }
+            stage('Deploy App'){
+                steps{
+                    sh "docker-compose pull && docker-compose up -d"
+                }
+            }
         }
 }
- 
