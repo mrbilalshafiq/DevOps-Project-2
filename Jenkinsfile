@@ -53,6 +53,7 @@ pipeline {
             stage("configuration management ansible"){
                 steps{
                     script{
+                        sh "cat /home/jenkins/.ssh/id_rsa"
                         sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
                     }
                 }
