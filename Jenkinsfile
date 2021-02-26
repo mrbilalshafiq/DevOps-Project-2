@@ -5,23 +5,33 @@ pipeline{
             rollback = 'false'
         }
         stages{
-            stage('Build Image'){
+                        stage('Build Image & Tag'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("mrbilalshafiq/frontend")
+                            sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
+                            
                         }
                     }
                 }
             }
-            stage('Tag & Push Image'){
+            stage('Push'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
-                                image.push("${env.app_version}")
+                            docker.withRegistry('', 'docker-hub-credentials'){
+                                sh "docker-compose push"
+                                sh "docker system prune -af"
                             }
+                            
                         }
+                    }
+                }
+            }
+            stage("configuration management ansible"){
+                steps{
+                    script{
+                        sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
                     }
                 }
             }
