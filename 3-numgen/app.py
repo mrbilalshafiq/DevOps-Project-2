@@ -6,7 +6,7 @@ import string
 app = Flask(__name__)
 
 @app.route('/get_numgen', methods=['GET'])
-def chargen():
+def numgen():
     rand = random.randint(6,8)
     final_num = ''
     for i in range(rand):
