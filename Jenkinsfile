@@ -23,28 +23,15 @@ pipeline {
                     '''
                 }
             }
-
-        stage('Build') {
-            steps {
-                sh "docker-compose build"
-            }
-        }
-        stage('Push') {
-            steps {
-                sh "docker-compose push"
-            }
-        }
-        stage("configuration management ansible"){
+            stage('Build Image & Tag'){
                 steps{
                     script{
-                        sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
+                        if (env.rollback == 'false'){
+                            sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
+                            
+                        }
+                    }
                 }
             }
         }
-        stage('Deploy') {
-            steps {
-                sh "docker-compose pull && docker stack deploy --compose-file docker-compose.yaml prizegen"
-            }
-        }
-    }
 }
