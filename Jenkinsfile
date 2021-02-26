@@ -27,11 +27,12 @@ pipeline {
                     '''
                 }
             }
-            stage('Build Image'){
+            stage('Build Image & Tag'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("mrbilalshafiq/frontend:${app_version}")
+                            sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
+
                         }
                     }
                 }
