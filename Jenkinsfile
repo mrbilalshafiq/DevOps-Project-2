@@ -31,7 +31,7 @@ pipeline {
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version}"
+                            sh "docker-compose build --parallel --build-arg ${app_version}"
 
                         }
                     }
