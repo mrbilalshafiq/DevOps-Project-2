@@ -60,7 +60,7 @@ pipeline {
             stage('Deploy swarm'){
                 steps{
                     sh '''
-                    ssh -T dontchangethisemailplease@34.105.204.33 << EOF
+                    ssh -oStrictHostKeyChecking=no dontchangethisemailplease@34.105.204.33 << EOF
                         rm -rf Project2
                         git clone https://github.com/mrbilalshafiq/Project2.git && cd Project2
                         export app_version=${app_version}
