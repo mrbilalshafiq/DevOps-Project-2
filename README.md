@@ -43,8 +43,7 @@ The requirements of the project are as follows:
  ## Jenkins Pipeline Stages
  ![Jenkins](https://github.com/mrbilalshafiq/Project2/blob/main/images/JenkinsPipelineStages.jpg)
  
- # Testing
- > 83.5%
+ # Testing: 83.5%
  ![Testing](https://github.com/mrbilalshafiq/Project2/blob/main/images/Testing.jpg)
  
  ## Database
