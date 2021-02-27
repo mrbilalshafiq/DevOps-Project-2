@@ -39,3 +39,7 @@ The requirements of the project are as follows:
  
  ## CI/CD
  ![DevOps](https://github.com/mrbilalshafiq/Project2/blob/main/images/DevOps%20Lifecycle.jpeg)
+ 
+ ## Database
+ ![mysql](https://github.com/mrbilalshafiq/Project2/blob/main/images/database-table.jpeg)
+
