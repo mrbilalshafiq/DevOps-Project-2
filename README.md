@@ -2,9 +2,6 @@
 
 As part of the second project, we were required to create a service-orientated architecture for my application, which must be composed of at least 4 services that work together. 
 
-## Architecture
-![Architecture](https://github.com/mrbilalshafiq/Project2/blob/main/images/Architecture.jpeg)
-
 ### Service 1
 The core service – this will render the Jinja2 templates you need to interact with your application, it will also be responsible for communicating with the other 3 services, and finally for persisting some data in an SQL database.
 
@@ -40,14 +37,17 @@ The requirements of the project are as follows:
  - Orchestration Tool: Docker Swarm
  - Reverse Proxy: NGINX
  
+ ## Finished Kanban Board
+ ![kanban](https://github.com/mrbilalshafiq/Project2/blob/main/images/KANBAN.jpg)
+ 
+ ## Architecture
+ ![Architecture](https://github.com/mrbilalshafiq/Project2/blob/main/images/Architecture.jpeg)
+ 
  ## CI/CD
  ![DevOps](https://github.com/mrbilalshafiq/Project2/blob/main/images/DevOps%20Lifecycle.jpeg)
  
  ## Jenkins Pipeline Stages
  ![Jenkins](https://github.com/mrbilalshafiq/Project2/blob/main/images/JenkinsPipelineStages.jpg)
- 
- ## Finished Kanban Board
- ![kanban](https://github.com/mrbilalshafiq/Project2/blob/main/images/KANBAN.jpg)
  
  ## Database
  ![mysql](https://github.com/mrbilalshafiq/Project2/blob/main/images/database-table.jpeg)
