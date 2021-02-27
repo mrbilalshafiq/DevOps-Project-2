@@ -38,4 +38,4 @@ The requirements of the project are as follows:
  - Reverse Proxy: NGINX
  
  ## CI/CD
- ![DevOps]
+ ![DevOps](https://github.com/mrbilalshafiq/Project2/blob/main/images/DevOps%20Lifecycle.jpeg)
