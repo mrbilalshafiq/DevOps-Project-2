@@ -40,6 +40,9 @@ The requirements of the project are as follows:
  ## CI/CD
  ![DevOps](https://github.com/mrbilalshafiq/Project2/blob/main/images/DevOps%20Lifecycle.jpeg)
  
+ ## Jenkins Pipeline Stages
+ ![Jenkins](https://github.com/mrbilalshafiq/Project2/blob/main/images/JenkinsPipelineStages.jpg)
+ 
  ## Database
  ![mysql](https://github.com/mrbilalshafiq/Project2/blob/main/images/database-table.jpeg)
 
