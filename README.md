@@ -54,6 +54,9 @@ The requirements of the project are as follows:
  
  ## Testing: 83.5%
  ![Testing](https://github.com/mrbilalshafiq/Project2/blob/main/images/Testing.jpg)
+ 
+ ## Building Image, Tagging & Finally Pushing Using Docker Compose
+ ![BuildPushTag](https://github.com/mrbilalshafiq/Project2/blob/main/images/buildtagpush.jpg)
   
  ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
  ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
