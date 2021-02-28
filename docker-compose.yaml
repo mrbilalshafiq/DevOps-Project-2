@@ -4,7 +4,7 @@ services:
     image: mrbilalshafiq/frontend:latest
     build: ./1-frontend
     deploy:
-      replicas: 8 
+      replicas: 2 
     ports:
     - "5000:5000"
     environment:
@@ -20,12 +20,12 @@ services:
     image: mrbilalshafiq/numgen:latest
     build: ./3-numgen
     deploy:
-      replicas: 4
+      replicas: 2
   prizegen:
     image: mrbilalshafiq/prizegen:latest
     build: ./4-prizegen
     deploy:
-      replicas: 6
+      replicas: 2
   nginx:
     image: nginx:latest
     ports:
