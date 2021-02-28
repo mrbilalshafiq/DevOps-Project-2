@@ -57,6 +57,9 @@ The requirements of the project are as follows:
  
  ## Building Image, Tagging & Finally Pushing Using Docker Compose
  ![BuildPushTag](https://github.com/mrbilalshafiq/Project2/blob/main/images/buildtagpush.jpg)
+ 
+ ## Using Ansible For Configuration Management
+ ![Ansible](https://github.com/mrbilalshafiq/Project2/blob/main/images/AnsibleConfiguration.jpg)
   
  ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
  ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
