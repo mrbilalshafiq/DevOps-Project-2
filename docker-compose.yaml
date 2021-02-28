@@ -1,8 +1,10 @@
 version: '3.8'
 services:
   frontend:
-    image: mrbilalshafiq/frontend:v2
+    image: mrbilalshafiq/frontend:${app_version}
     build: ./1-frontend
+    deploy:
+      replicas: 2
     ports:
     - "5000:5000"
     environment:
@@ -12,12 +14,18 @@ services:
   chargen:
     image: mrbilalshafiq/chargen:latest
     build: ./2-chargen
+    deploy:
+      replicas: 2
   numgen:
     image: mrbilalshafiq/numgen:latest
     build: ./3-numgen
+    deploy:
+      replicas: 2
   prizegen:
     image: mrbilalshafiq/prizegen:latest
     build: ./4-prizegen
+    deploy:
+      replicas: 2
   nginx:
     image: nginx:latest
     ports:
