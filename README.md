@@ -54,3 +54,9 @@ The requirements of the project are as follows:
  
  ## Testing: 83.5%
  ![Testing](https://github.com/mrbilalshafiq/Project2/blob/main/images/Testing.jpg)
+ 
+ ## Scaling Micro-Services
+ ![Scalability](https://github.com/mrbilalshafiq/Project2/blob/main/images/scalability.jpg)
+ 
+ ## Performing Rolling Update With NO DOWNTIME
+ ![RollingUpdate](https://github.com/mrbilalshafiq/Project2/blob/main/images/rollingupdate.jpg)
