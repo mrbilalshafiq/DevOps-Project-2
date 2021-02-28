@@ -61,6 +61,5 @@ The requirements of the project are as follows:
  ## Performing Rolling Update With NO DOWNTIME
  ![RollingUpdate](https://github.com/mrbilalshafiq/Project2/blob/main/images/rollingupdate.jpg)
  
- ## Making App Accessible To User On Both IP Addresses
- Using NGINX as a reverse proxy, the app becomes available without specifying a port number and this applies to both, the manager node and worker node.
+ ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
  ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
