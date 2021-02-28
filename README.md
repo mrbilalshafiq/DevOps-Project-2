@@ -61,11 +61,11 @@ The requirements of the project are as follows:
  ## Using Ansible For Configuration Management
  ![Ansible](https://github.com/mrbilalshafiq/Project2/blob/main/images/AnsibleConfiguration.jpg)
   
- ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
- ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
- 
  # Deploying The Application Using Docker Swarm Stack
  ![DeployStack](https://github.com/mrbilalshafiq/Project2/blob/main/images/deployswarmstack.jpg)
+ 
+ ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
+ ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
  
  ## Scaling Micro-Services By Editing docker-compose.yaml
  ![Scalability](https://github.com/mrbilalshafiq/Project2/blob/main/images/scalability.jpg)
