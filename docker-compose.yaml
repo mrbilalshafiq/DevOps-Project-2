@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   frontend:
-    image: mrbilalshafiq/frontend:${app_version}
+    image: mrbilalshafiq/frontend:latest
     build: ./1-frontend
     deploy:
       replicas: 2
