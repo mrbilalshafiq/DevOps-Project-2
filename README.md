@@ -54,3 +54,12 @@ The requirements of the project are as follows:
  
  ## Testing: 83.5%
  ![Testing](https://github.com/mrbilalshafiq/Project2/blob/main/images/Testing.jpg)
+  
+ ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
+ ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
+ 
+ ## Scaling Micro-Services By Editing docker-compose.yaml
+ ![Scalability](https://github.com/mrbilalshafiq/Project2/blob/main/images/scalability.jpg)
+ 
+ ## Performing Rolling Update Using GitHub Webhook To Deploy On Jenkins With No Downtime
+ ![RollingUpdate](https://github.com/mrbilalshafiq/Project2/blob/main/images/rollingupdate.jpg)
