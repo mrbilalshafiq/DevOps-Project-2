@@ -1,4 +1,5 @@
-# Project2
+# DevOps-Project-2
+> Building on the skills used in Project 1 by implementing a CI/CD pipeline using Jenkins, Ansible, Docker & Github.
 
 As part of the second project, we were required to create a service-orientated architecture for my application, which must be composed of at least 4 services that work together. 
 
@@ -72,3 +73,9 @@ The requirements of the project are as follows:
  
  ## Performing Rolling Update Using GitHub Webhook To Deploy On Jenkins With No Downtime
  ![RollingUpdate](https://github.com/mrbilalshafiq/Project2/blob/main/images/rollingupdate.jpg)
+ 
+ ## Risk Assessment
+ ![RiskAssessment](https://github.com/mrbilalshafiq/DevOps-Project-2/blob/main/images/Risk%20Assessment.jpg)
+ 
+ ## Analysis
+ 
