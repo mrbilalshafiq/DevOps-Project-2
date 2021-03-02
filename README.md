@@ -1,4 +1,5 @@
-# Project2
+# DevOps-Project-2
+> Building on the skills used in Project 1 by implementing a CI/CD pipeline using Jenkins, Ansible, Docker & Github.
 
 As part of the second project, we were required to create a service-orientated architecture for my application, which must be composed of at least 4 services that work together. 
 
@@ -54,7 +55,16 @@ The requirements of the project are as follows:
  
  ## Testing: 83.5%
  ![Testing](https://github.com/mrbilalshafiq/Project2/blob/main/images/Testing.jpg)
+ 
+ ## Building Image, Tagging & Finally Pushing Using Docker Compose
+ ![BuildPushTag](https://github.com/mrbilalshafiq/Project2/blob/main/images/buildtagpush.jpg)
+ 
+ ## Using Ansible For Configuration Management
+ ![Ansible](https://github.com/mrbilalshafiq/Project2/blob/main/images/AnsibleConfiguration.jpg)
   
+ # Deploying The Application Using Docker Swarm Stack
+ ![DeployStack](https://github.com/mrbilalshafiq/Project2/blob/main/images/deployswarmstack.jpg)
+ 
  ## Using Reverse Proxy On Manager Node & Worker Node To Remove The Need To Specify A Port Number
  ![Reverseproxy](https://github.com/mrbilalshafiq/Project2/blob/main/images/reverseproxy.jpg)
  
@@ -63,3 +73,15 @@ The requirements of the project are as follows:
  
  ## Performing Rolling Update Using GitHub Webhook To Deploy On Jenkins With No Downtime
  ![RollingUpdate](https://github.com/mrbilalshafiq/Project2/blob/main/images/rollingupdate.jpg)
+ 
+ ## Risk Assessment
+ ![RiskAssessment](https://github.com/mrbilalshafiq/DevOps-Project-2/blob/main/images/Risk%20Assessment.jpg)
+ 
+ ## Analysis
+ During this project, I prioritised according to the objectives. All the constraints and  the scope was fully met with my web-application, aiming for a minimum viable product. Like the DevOps way of working, my work was not isolated to a portion of the pipeline and instead I was responsible for the whole pipeline from end-to-end. Being in control of the operational functions bring alot of advantages, mainly the assurance that the code isn't faulty due to the testing and configuration that happens within Jenkins. Having an automated system for running tasks means that the tasks are less tedious and time consuming, allowing me to be more efficient and productive with my time.
+ 
+ As well as doing continuous integration and continious delivery, this project facilitated contiuous learning of the DevOps tools and practices. I was able to share what I've learnt and where I went wrong with the rest of the team, openly discussing failures in order to share my learning. The project also helped me identify which skills I needed to improve and, even better, helped me improve those very same skills. I was able to learn from the first project by examining how I complete my work and how effectively I complete it. This has helped give me a baseline of how much time it takes to complete parts of the project which allows me to manage my time better.
+ 
+ I completed this project within 7 days and this was achieved by working in an iterative format, slowly building my application layer-by-layer. Everytime I discovered a defect I would stop development and prioritise its repair. Having automated testing prior to automated production deployment allows us to correct any issues before releasing to the public. The configuration of systems is automated allowing for minimal error once the 'infrastructure as code' is complete and correct. During my work on this application I followed agile development practices, regularly examining the constraints in the project. I maintained a backlog of tasks on my kanban board, and for this I used Trello. 
+ 
+ In conclusion, I know that I still have alot more to learn however, I am proud of what I have accomplished thus far, as stated in the message for myself at the end of my Jenkinsfile.
