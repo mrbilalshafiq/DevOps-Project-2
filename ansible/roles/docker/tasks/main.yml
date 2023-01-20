@@ -33,7 +33,7 @@
       executable: pip3
   - name: Add user to docker group
     user: 
-      name: dontchangethisemailplease 
+      name: ubuntu 
       groups: docker
       append: yes
   - name: restart connection to ensure user can complete docker commands
